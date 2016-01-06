@@ -1,6 +1,8 @@
 
 function init(app) {
     var request=require('request');
+    var cheerio=require('cheerio');
+app.pages=[];
 
     
      var arr=[];
@@ -8,9 +10,11 @@ function init(app) {
     
      return item.toString();
     }
-  var tess= request("http://animevost.org/",function(err,res,body){
+  request("http://animevost.org/",function(err,res,body){
    (function(){
-       app.body=body;
+      var $=cheerio.load(body);
+    console
+     console.log($('.block_4')._root[0].children[0].next.next);
    })();
      
 
