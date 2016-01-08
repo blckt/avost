@@ -2,7 +2,7 @@
 function init(app) {
     var request=require('request');
     var cheerio=require('cheerio');
-app.pages=[];
+
 
     
      var arr=[];
@@ -13,8 +13,7 @@ app.pages=[];
   request("http://animevost.org/",function(err,res,body){
    (function(){
       var $=cheerio.load(body);
-    console
-     console.log($('.block_4')._root[0].children[0].next.next);
+  //     console.log($('.block_4')._root[0].children[0].next.next);
    })();
      
 
